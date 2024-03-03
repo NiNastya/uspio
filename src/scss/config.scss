@@ -2,10 +2,16 @@
     font-family: "Proxima Nova";
     line-height: 1.2;
     color: $primary;
+    transition: 0.3s;
 }
 html {
     width: 100vw;
     overflow-x: hidden;
+}
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    // Уберает боковой скрол, который появляется из за анимаций AOS
 }
 h1 {
     font-size: 42px;
@@ -89,4 +95,12 @@ a {
 }
 .ModalImg {
     cursor: zoom-in;
+}
+
+// Выравнивание слайдов 
+.swiper-wrapper {
+    align-items: stretch;
+    .swiper-slide {
+        height: auto;
+    }
 }

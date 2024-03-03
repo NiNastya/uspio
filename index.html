@@ -7,6 +7,7 @@
     <title>Uspio</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -107,57 +108,57 @@
                 <span>Текст текст</span>
               </div>
               <div class="banner__info me-3">
-                <h1>Заголовок <span>текст текст</span> текст текст текст текст</h1>
-                <div class="banner__info-text">
+                <h1 data-aos="flip-left" data-aos-delay="100">Заголовок <span>текст текст</span> текст текст текст текст</h1>
+                <div class="banner__info-text"  data-aos="flip-left" data-aos-delay="200">
                   <p><span>текст текст, текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</span></p>
                   <p>Текст – текст текст текст  текст  текст , текст  текст  текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p>
                 </div>
               </div>
-              <button data-bs-toggle="modal" data-bs-target="#ModalForm">Записаться на проверку </button>
+              <button class="anim" data-aos="flip-left" data-aos-delay="300" data-bs-toggle="modal"  data-bs-target="#ModalForm">Записаться на проверку </button>
             </div>
             <div class="col-md-4 col-xs-12">
-              <img src="/public//images/banner.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+              <img src="/public//images/banner.png" alt="" data-aos="fade-left" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
         </div>
       </section>
       <section class="advantages">
         <div class="container">
-          <h2>Заголовок заголовок заголовок</h2>
+          <h2 data-aos="zoom-in">Заголовок заголовок заголовок</h2>
           <!-- Данная сетка сделана что бы четко соблести отсупы между элементами -->
            <div class="advantages__grid">
-            <div class="advantages__grid-item">
+            <div class="advantages__grid-item" data-aos="zoom-out" data-aos-delay="100">
               <!-- Тут по БЭМ подошло бы стуктура advantages-grid__item-icon но я пишу по инструкции -->
               <div class="advantages__grid-icon">
                 <img src="/public/images/i1.svg" alt="">
               </div>
               <p>Текст <span>Текст текст</span> Текст текст Текст</p>
             </div>
-            <div class="advantages__grid-item">
+            <div class="advantages__grid-item" data-aos="zoom-out" data-aos-delay="200">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i2.svg" alt="">
               </div>
               <p>Текст Текст Текст Текст Текст <br>Текст Текст <br>Текст Текст Текст </p>
             </div>
-            <div class="advantages__grid-item">
+            <div class="advantages__grid-item" data-aos="zoom-out" data-aos-delay="300">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i3.svg" alt="">
               </div>
               <p>Текст Текст Текст <br>Текст </p>
             </div>
-            <div class="advantages__grid-item">
+            <div class="advantages__grid-item" data-aos="zoom-out" data-aos-delay="400">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i4.svg" alt="">
               </div>
               <p>Текст Текст Текст Текст <br>Текст Текст <br>Текст Текст </p>
             </div>
-            <div class="advantages__grid-item">
+            <div class="advantages__grid-item" data-aos="zoom-out" data-aos-delay="500">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i5.svg" alt="">
               </div>
               <p><span>Текст Текст Текст</span>, <br>Текст Текст Текст Текст <br>Текст Текст </p>
             </div>
-            <div class="advantages__grid-item">
+            <div class="advantages__grid-item" data-aos="zoom-out" data-aos-delay="600">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i6.svg" alt="">
               </div>
@@ -165,7 +166,7 @@
             </div>
           </div>
           <!-- Отступ 30px сверху для конпки лучше задать в css -->
-           <button class="icon"  data-bs-toggle="modal" data-bs-target="#ModalForm">
+           <button class="icon anim"  data-aos="zoom-in" data-aos-delay="700" data-bs-toggle="modal" data-bs-target="#ModalForm">
             Записаться на проверку 
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -185,7 +186,7 @@
       <section class="about">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 col-xs-12">
+            <div class="col-md-8 col-xs-12" data-aos="fade-right">
               <h2>Текст текст:</h2>
               <div class="about__text">
                 <ul>
@@ -198,7 +199,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-4 col-xs-12">
+            <div class="col-md-4 col-xs-12" data-aos="zoom-in" data-aos-delay="300">
               <img src="/public/images/about.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
@@ -206,8 +207,8 @@
       </section>
       <section class="service">
         <div class="container">
-          <h2>Заголовок</h2>
-
+          <h2 data-aos="zoom-in" >Заголовок</h2>
+          
           <!-- Pedding устанавливаю что бы не срезалась тень от блока -->
           <div class="swiper mySwiper pb-2 mx-xs-2">
             <div class="swiper-wrapper">
@@ -269,21 +270,21 @@
           <div class="faq__block row mx-xs-2">
             <!-- Pedding 30px лучше задать в речную -->
           <div class="faq__block-info col-md-7 col-xs-12">
-              <h2>Вопрос вопрос вопрос вопрос вопрос вопрос вопрос?</h2>
-              <ol>
+              <h2 data-aos="flip-left" data-aos-delay="100">Вопрос вопрос вопрос вопрос вопрос вопрос вопрос?</h2>
+              <ol data-aos="flip-left" data-aos-delay="200">
                 <li>Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст </li>
                 <li>Текст Текст Текст Текст Текст Текст Текст </li>
                 <li>Текст Текст Текст Текст Текст Текст Текст Текст </li>
                 <li>Текст Текст Текст Текст Текст Текст Текст Текст Текст </li>
                 <li>Текст Текст Текст Текст Текст Текст </li>
               </ol>
-              <p>Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст .</p>
+              <p data-aos="flip-left" data-aos-delay="300">Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст .</p>
             </div>
-            <div class="col-md-5 col-xs-12 p-0">
-              <img src="/public/images/faq.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+            <div class="col-md-5 col-xs-12 p-0" data-aos="fade-left">
+              <img src="/public/images/faq.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg" >
             </div>
           </div>
-          <button class="icon"  data-bs-toggle="modal" data-bs-target="#ModalForm">
+          <button class="icon anim"  data-bs-toggle="modal" data-bs-target="#ModalForm">
             Записаться на проверку 
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -310,7 +311,7 @@
             </div>
             <form action="" id="subscribe" class="d-md-flex footer__top-form">
               <input type="email" name="email" placeholder="Введите свой e-mail" class="me-3">
-              <button id="btn-form">Подписаться</button>
+              <button class="anim" id="btn-form">Подписаться</button>
             </form>
             <div class="footer__top-social d-flex align-items-center">
               <!-- Использую span так как у p есть отступ снизу -->
@@ -332,7 +333,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3 col-xs-12 border-end pe-4">
-              <img src="/public/images/logo.png" alt="" class="w-100">
+              <div class="footer__info-logo">
+                <img src="/public/images/logo.png" alt="" class="w-100">
+              </div>
               <a href="#" class="footer__info-contact d-flex mb-2">
                 <!-- Лучше поставить SVG кодом но для сокрашения строк ставляю тегом img -->
                 <img src="/public/images/phone.svg" alt="">
@@ -413,6 +416,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="src/js/main.js"></script>
     
@@ -432,7 +436,7 @@
                 <input type="checkbox">
                 <span>Вы согласны с нашей <a href="#">политикой конфиденциальности</a></span>
               </label>
-              <button type="submit">Отправить</button>
+              <button class="anim" type="submit">Отправить</button>
             </form>
           </div>
         </div>

@@ -1,12 +1,15 @@
 import '../scss/style.scss'
 import axios from 'axios';
+
+AOS.init();
+
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     slidesPerView: 3,
     loop: true,
     lazy: true,
     autoplay: {
-        delay: 5000,
+        delay: 50000,
         disableOnInteraction: false,
     },
     breakpoints: {
@@ -30,6 +33,7 @@ burgerBtn.addEventListener('click', function () {
 // отправка формы 
 
 document.getElementById('subscribe').addEventListener('submit', function (event) {
+    // Сделать влидацию формы
     event.preventDefault();
     const formData = new FormData(this);
     axios.post('/public/send.json', formData)

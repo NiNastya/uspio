@@ -1,0 +1,102 @@
+.header__top-logo,
+.footer__info-logo {
+    img {
+        transform: rotate(0deg);
+
+        &:hover {
+            transform: rotate(-5deg);
+
+        }
+    }
+}
+
+.header__top-btn {
+    &:hover {
+        background: $green;
+
+        .text {
+            color: $primary;
+
+            span {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.header__top-phone {
+    a {
+        transform: scale(1);
+    }
+
+    &:hover {
+        a {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.header__top-icon {
+    transform: rotate(0deg);
+
+    &:hover {
+        transform: rotate(5deg);
+    }
+}
+
+nav {
+    a {
+        &:hover {
+            font-weight: 700;
+        }
+    }
+}
+
+button.anim {
+    transform: rotate(0deg);
+
+    &:hover {
+        background: #fff;
+        color: $primary;
+        box-shadow: 0px 10px 20px 0px rgba(132, 199, 55, 0.5);
+        transform: rotate(-2deg);
+    }
+
+    &.icon {
+        &:hover {
+            span {
+                background: $green;
+            }
+        }
+    }
+}
+
+.advantages__grid-item {
+    .advantages__grid-icon {
+        transform: rotate(0deg);
+    }
+
+    &:hover {
+        box-shadow: 0px 10px 20px 0px rgba(132, 199, 55, 0.3);
+
+        .advantages__grid-icon {
+            transform: rotate(10deg);
+        }
+    }
+}
+
+.footer__top-social {
+    a {
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.service__item {
+    &:hover {
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    }
+}
