@@ -1,0 +1,437 @@
+.header {
+    &__top {
+        &-logo {
+            display: flex;
+            gap: 44px;
+            align-items: center;
+        }
+
+        &-contact {
+            h3 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 22px;
+                text-transform: uppercase;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+
+                span {
+                    color: $gray;
+
+                    &.active {
+                        color: $green;
+                        font-weight: 700;
+                    }
+                }
+
+                .line {
+                    width: 1px;
+                    height: 16px;
+                    background: $gray;
+                }
+            }
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 30px;
+            border-radius: 26px;
+            border: 1px solid $green;
+            cursor: pointer;
+
+            .text {
+                color: $green;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1;
+
+                span {
+                    color: $green;
+                    font-size: 16px;
+                    font-weight: 700;
+                    display: block;
+                    line-height: 1;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14px;
+            }
+        }
+
+        &-left {
+            gap: 40px;
+        }
+
+        &-phone {
+            text-align: right;
+
+            a {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 30px;
+            }
+
+            span {
+                cursor: pointer;
+                color: $green;
+                font-size: 14px;
+                line-height: 1;
+                border-bottom: 1px dashed $green;
+            }
+        }
+
+        &-icon {
+            position: relative;
+            cursor: pointer;
+
+            span {
+                font-size: 12px;
+                font-weight: 600;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                background: $green;
+                top: -14px;
+                right: -14px;
+                position: absolute;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__menu {
+        background: $green;
+        position: relative;
+        // &-grid {
+        //     display: grid;
+        //     grid-template-columns: 1fr 2fr 1fr;
+        // }
+        &-serch {
+            background: #62A53C;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -500px;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 0px 36px;
+            label {
+                display: flex;
+                align-items: center;
+                input {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 0;
+                    border: none;
+                    background: none;
+                    color: #fff;
+                }
+            }
+        }
+        .col-1 {
+            position: relative;
+        }
+        nav {
+            grid-column-start: 2;
+            a {
+                padding: 0px 28px;
+                border-left: 1px solid $gray;
+                border-right: 1px solid $gray;
+                color: #fff;
+                &:nth-child(1) {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    background: $BG-light-grey;
+    margin-top: 0;
+
+    &__breadcrumbs {
+        margin: 20px 0;
+        gap: 8px;
+        color: $gray;
+    }
+
+    h1 {
+        span {
+            color: $green;
+        }
+    }
+
+    &__info {
+        &-text {
+            margin: 30px 0;
+            margin-top: 60px;
+
+            p {
+                font-style: italic;
+
+                span {
+                    font-style: normal;
+                    color: $gray;
+                }
+            }
+        }
+    }
+
+    // Так как подобная кнопка одна перебиваю стили из конфига
+    button {
+        font-size: 14px;
+        background: #fff;
+        font-weight: 600;
+        color: $gray-primary;
+        padding: 15px 30px;
+        border: 1px solid $green;
+        box-shadow: none;
+    }
+}
+
+.advantages {
+    // Данный блок написан без bootstrap что бы соблюсти PixelPerfect 
+    text-align: center;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+
+        &-item {
+            padding: 32px;
+            margin-top: 42px; // пространство под иконку
+            padding-top: 70px; // Отступ от иконки по по фигме 28px + 42px половина иконки находящияся в блоке
+            background: $BG-light-grey;
+            border-radius: 15px;
+            position: relative;
+
+            p {
+                font-size: 18px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 30px;
+
+                span {
+                    color: $green;
+                }
+            }
+        }
+
+        &-icon {
+            width: 84px;
+            height: 84px;
+            background: $green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            position: absolute;
+            left: calc(50% - 42px); // отступ сбоку
+            top: -42px; // отступ половину сверху
+        }
+    }
+
+    button {
+        margin: 30px auto;
+    }
+}
+
+.about {
+    margin: 60px 0;
+}
+
+.service {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+
+        &-item {
+            overflow: hidden; // Предположем что с бекенда пришла большая картинка и углы выходят за блок
+            border-radius: 8px;
+            border: 1px solid $sroke;
+            background: #FFF;
+            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        &-info {
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+}
+
+.faq {
+    &__block {
+        border-radius: 20px;
+        border: 1px solid $sroke;
+        background: $BG-light-grey;
+
+        &-info {
+            padding: 30px;
+        }
+
+        ol {
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    button {
+        margin: 30px auto;
+    }
+
+}
+
+.contact {
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.10);
+    padding: 30px;
+
+    &__text {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__form {
+        button {
+            text-transform: none;
+            padding: 15px 30px;
+        }
+    }
+
+    &__social {
+        font-weight: 700;
+        text-transform: uppercase;
+        gap: 15px;
+
+        &-item {
+            background: $BG-light-grey;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    }
+}
+
+.footer {
+    &__top {
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.10);
+        padding: 30px;
+
+        &-text {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &-form {
+            button {
+                text-transform: none;
+                padding: 15px 30px;
+            }
+        }
+
+        &-social {
+            font-weight: 700;
+            text-transform: uppercase;
+            gap: 15px;
+
+            a {
+                background: $BG-light-grey;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__info {
+        background: $BG-light-grey;
+
+        &-contact {
+            font-size: 16px;
+
+            span {
+                color: $gray;
+            }
+        }
+
+        &-nav {
+
+            // padding: 40px 0;
+            h3 {
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: $gray;
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: $gray;
+        }
+
+    }
+
+    &__policy {
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.10);
+        padding: 30px;
+
+        a,
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            color: $gray;
+        }
+
+        a {
+            font-weight: 600;
+        }
+    }
+}

@@ -3,3 +3,80 @@
     line-height: 1.2;
     color: $primary;
 }
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.container {
+    // Задаю ширину как в фигме
+    max-width: 1170px;
+}
+
+section {
+    margin: 60px 0;
+}
+
+button {
+    padding: 10px;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 35px;
+    background: var(--Gradient, linear-gradient(90deg, #6CB644 0%, #82CA2C 100%));
+    box-shadow: 0px 10px 20px 0px rgba(132, 199, 55, 0.30);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    span {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFF;
+        border-radius: 50%;
+    }
+    &.icon {
+        padding-left: 30px;
+    }
+}
+.gray {
+    color: $gray;
+}
+li {
+    font-size: 18px;
+    color: $gray-primary;
+    line-height: 30px;
+}
+p {
+    font-size: 16px;
+    line-height: 22px;
+}
+input {
+    padding: 15px 30px;
+    font-weight: 600;
+    color: $gray-primary;
+    border-radius: 26px;
+    border: 1px solid $green;
+    outline: none;
+    &::placeholder {color: $gray-primary;}
+}
+a {
+    color: $primary;
+    text-decoration: none;
+    display: block;
+}
