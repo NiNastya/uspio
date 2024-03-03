@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uspio</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
@@ -34,7 +35,7 @@
             <div class="header__top-left d-flex align-items-center">
               <div class="header__top-phone">
                 <a href="#">+7 (800) 111-111-1</a>
-                <span>Перезвоните мне</span>
+                <span data-bs-toggle="modal" data-bs-target="#ModalForm">Перезвоните мне</span>
               </div>
               <div class="header__top-icon">
                 <img src="/public/images/favorite.svg" alt="">
@@ -75,42 +76,6 @@
           </div>
           
         </div>
-        <!-- <div class="row">
-
-          <div class="col-2"></div>
-          <nav class="d-flex justify-content-center p-4 col-8">
-            <a href="">Текст текст</a>
-            <a href="">Текст текст текст</a>
-            <a href="">Текст текст</a>
-            <a href="">Текст текст</a>
-            <a href="">Текст текст</a>
-            <a href="">Текст и текст</a>
-          </nav>
-          <div class="header__menu-serch col-2">
-            <form action="">
-              <img src="/public/images/serch.svg" alt="">
-              <input type="text" name="" id="">
-            </form>
-          </div>
-        </div> -->
-        <!-- <div class="container-full"> -->
-          <!-- <div class="col-2"></div>
-          <nav class="d-flex justify-content-center p-4 col-8">
-            <a href="">Текст текст</a>
-            <a href="">Текст текст текст</a>
-            <a href="">Текст текст</a>
-            <a href="">Текст текст</a>
-            <a href="">Текст текст</a>
-            <a href="">Текст и текст</a>
-          </nav> -->
-        <!-- </div> -->
-        <!-- <div class="header__menu-serch col-2">
-          <form action="">
-            <img src="/public/images/serch.svg" alt="">
-            <input type="text" name="" id="">
-          </form>
-        </div> -->
-        <!-- </div> -->
       </div>
     </header>
     <main>
@@ -143,10 +108,10 @@
                   <p>Текст – текст текст текст  текст  текст , текст  текст  текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p>
                 </div>
               </div>
-              <button>Записаться на проверку </button>
+              <button data-bs-toggle="modal" data-bs-target="#ModalForm">Записаться на проверку </button>
             </div>
             <div class="col-4">
-              <img src="/public//images/banner.png" alt="">
+              <img src="/public//images/banner.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
         </div>
@@ -195,7 +160,7 @@
             </div>
           </div>
           <!-- Отступ 30px сверху для конпки лучше задать в css -->
-          <button class="icon">
+          <button class="icon"  data-bs-toggle="modal" data-bs-target="#ModalForm">
             Записаться на проверку 
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -229,7 +194,7 @@
               </div>
             </div>
             <div class="col-4">
-              <img src="/public/images/about.png" alt="">
+              <img src="/public/images/about.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
         </div>
@@ -237,30 +202,56 @@
       <section class="service">
         <div class="container">
           <h2>Заголовок</h2>
-          <!-- аналогично что и с прошлой сеткой для вдержки отсупов -->
-          <div class="service__grid">
-            <div class="service__grid-item">
-              <img src="/public/images/service.png" alt="">
-              
-              <!-- Тут по БЭМ подошло бы стуктура service-grid__item-info но я пишу по инструкции -->
-              <!-- По фигме pedding 25px botstrap в p-4 дает 24px -->
-              <div class="service__grid-info p-4">
-                <h3>Вопрос вопрос вопрос?</h3>
-                <p>Текст Текст Текст Текст Текст Текст </p>
+
+          <!-- Pedding устанавливаю что бы не срезалась тень от блока -->
+          <div class="swiper mySwiper pb-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="service__item">
+                  <img src="/public/images/service.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+                  <!-- Тут по БЭМ подошло бы стуктура service-grid__item-info но я пишу по инструкции -->
+                  <!-- По фигме pedding 25px botstrap в p-4 дает 24px -->
+                  <div class="service__item-info p-4">
+                    <h3>Вопрос вопрос вопрос?</h3>
+                    <p>Текст Текст Текст Текст Текст Текст </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="service__grid-item">
-              <img src="/public/images/service.png" alt="">
-              <div class="service__grid-info p-4">
-                <h3>Вопрос вопрос вопрос?</h3>
-                <p>Текст Текст Текст Текст Текст Текст </p>
+              <div class="swiper-slide">
+                <div class="service__item">
+                  <img src="/public/images/service2.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+                  <div class="service__item-info p-4">
+                    <h3>Вопрос вопрос вопрос?</h3>
+                    <p>Текст Текст Текст Текст Текст Текст </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="service__grid-item">
-              <img src="/public/images/service.png" alt="">
-              <div class="service__grid-info p-4">
-                <h3>Вопрос вопрос вопрос?</h3>
-                <p>Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст*</p>
+              <div class="swiper-slide">
+                <div class="service__item">
+                  <img src="/public/images/service3.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+                  <div class="service__item-info p-4">
+                    <h3>Вопрос вопрос вопрос?</h3>
+                    <p>Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст*</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service__item">
+                  <img src="/public/images/service2.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+                  <div class="service__item-info p-4">
+                    <h3>Вопрос вопрос вопрос?</h3>
+                    <p>Текст Текст Текст Текст Текст Текст </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service__item">
+                  <img src="/public/images/service3.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
+                  <div class="service__item-info p-4">
+                    <h3>Вопрос вопрос вопрос?</h3>
+                    <p>Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст*</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -284,10 +275,10 @@
               <p>Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст .</p>
             </div>
             <div class="col-5 p-0">
-              <img src="/public/images/faq.png" alt="">
+              <img src="/public/images/faq.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
-          <button class="icon">
+          <button class="icon"  data-bs-toggle="modal" data-bs-target="#ModalForm">
             Записаться на проверку 
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -312,9 +303,9 @@
             <div class="footer__top-text">
               Текст текст текст текст текст<br> текст текст 
             </div>
-            <form action="" class="d-flex footer__top-form">
-              <input type="email" placeholder="Введите свой e-mail" class="me-3">
-              <button>Подписаться</button>
+            <form action="" id="subscribe" class="d-flex footer__top-form">
+              <input type="email" name="email" placeholder="Введите свой e-mail" class="me-3">
+              <button id="btn-form">Подписаться</button>
             </form>
             <div class="footer__top-social d-flex align-items-center">
               <!-- Использую span так как у p есть отступ снизу -->
@@ -415,9 +406,36 @@
     </footer>
 
 
-
-    
-    <script type="module" src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+    
   </body>
+    <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalForm" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalFormLabel">Записатся</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <input type="text" placeholder="Номер телефона">
+              <input type="email" placeholder="E-mail">
+              <label for="">
+                <input type="checkbox">
+                <span>Вы согласны с нашей <a href="#">политикой конфиденциальности</a></span>
+              </label>
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="ModalImg" tabindex="-1" aria-labelledby="ModalImg" aria-hidden="true">
+      <div class="modal-dialog">
+       <img class="modal-img" src="/public/images/service.png">
+      </div>
+    </div>
 </html>
