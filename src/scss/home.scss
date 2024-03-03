@@ -1,9 +1,20 @@
 .header {
+    position: sticky;
+    top: -112px;
+    z-index: 99;
+    @include sm-block() {top: 0;}
+    
     &__top {
+        background: #fff;
         &-logo {
             display: flex;
             gap: 44px;
             align-items: center;
+            img {
+                @include sm-block() {
+                    height: 60px;
+                }
+            }
         }
 
         &-contact {
@@ -115,6 +126,7 @@
     &__menu {
         background: $green;
         position: relative;
+
         // &-grid {
         //     display: grid;
         //     grid-template-columns: 1fr 2fr 1fr;
@@ -129,9 +141,13 @@
             display: flex;
             align-items: center;
             padding: 0px 36px;
+            @include sm-block() {
+                position: relative;
+            }
             label {
                 display: flex;
                 align-items: center;
+
                 input {
                     height: 100%;
                     width: 100%;
@@ -142,25 +158,35 @@
                 }
             }
         }
+
         .col-1 {
             position: relative;
         }
+
         nav {
             grid-column-start: 2;
+
             a {
                 padding: 0px 28px;
                 border-left: 1px solid $gray;
                 border-right: 1px solid $gray;
                 color: #fff;
+                @include sm-block() {
+                    border: none;
+                    margin: 16px 0;
+                    font-weight: 700;
+                }
                 &:nth-child(1) {
                     border-left: none;
                 }
+
                 &:last-child {
                     border-right: none;
                 }
             }
         }
     }
+
 }
 
 .banner {
@@ -183,7 +209,7 @@
         &-text {
             margin: 30px 0;
             margin-top: 60px;
-
+            @include sm-block() {margin-top: 30px;}
             p {
                 font-style: italic;
 
@@ -193,6 +219,11 @@
                 }
             }
         }
+    }
+
+    img {
+        width: 100%;
+        @include sm-block() {margin-top: 30px;}
     }
 
     // Так как подобная кнопка одна перебиваю стили из конфига
@@ -215,7 +246,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
-
+        @include sm-block() {grid-template-columns: 1fr;}
         &-item {
             padding: 32px;
             margin-top: 42px; // пространство под иконку
@@ -223,14 +254,19 @@
             background: $BG-light-grey;
             border-radius: 15px;
             position: relative;
-
+            @include sm-block() {
+                padding: 16px;
+                padding-top: 54px;
+            }
             p {
                 font-size: 18px;
                 font-weight: 700;
                 text-align: center;
                 text-transform: uppercase;
                 line-height: 30px;
-
+                @include sm-block() {
+                    font-size: 16px;
+                }
                 span {
                     color: $green;
                 }
@@ -268,6 +304,7 @@
         border: 1px solid $sroke;
         background: #FFF;
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+
         &-info {
             h3 {
                 font-size: 20px;
@@ -284,9 +321,10 @@
         border-radius: 20px;
         border: 1px solid $sroke;
         background: $BG-light-grey;
-
+        @include sm-block() {border-radius: 0;}
         &-info {
             padding: 30px;
+            @include sm-block() {padding: 16px;}
         }
 
         ol {
@@ -296,6 +334,7 @@
         p {
             font-size: 18px;
             line-height: 30px;
+            @include sm-block() {font-size: 16px;}
         }
 
         img {
@@ -348,16 +387,25 @@
     &__top {
         box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.10);
         padding: 30px;
-
+        @include sm-block() {padding: 16px;}
         &-text {
             font-size: 18px;
             font-weight: 700;
         }
 
         &-form {
+            @include sm-block() {
+                margin: 30px 0;
+            }
             button {
                 text-transform: none;
                 padding: 15px 30px;
+            }
+            @include sm-block() {
+                input, button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
             }
         }
 
@@ -437,11 +485,13 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 16px;
+
         label {
             display: flex;
             align-items: center;
             gap: 16px;
             width: 100%;
+
             a {
                 display: inline;
                 color: $green;

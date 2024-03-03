@@ -19,6 +19,14 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
+
+// Бургер меню
+var burgerBtn = document.getElementById('header__burger');
+var burgerMenu = document.getElementById('header__menu');
+burgerBtn.addEventListener('click', function () {
+    burgerMenu.classList.toggle('d-none');
+});
+
 // отправка формы 
 
 document.getElementById('subscribe').addEventListener('submit', function (event) {

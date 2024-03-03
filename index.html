@@ -15,7 +15,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="header__top-logo">
               <img src="/public/images/logo.png" alt="">
-              <div class="header__top-contact">
+              <div class="header__top-contact d-none d-sm-block">
                 <h3 class="mb-0">Текст Текст</h3>
                 <div>
                   <img src="/public/images/map.svg" alt="">
@@ -25,14 +25,14 @@
                 </div>
               </div>
             </div>
-            <div class="header__top-btn">
+            <div class="header__top-btn  d-none d-sm-flex"  data-bs-toggle="modal" data-bs-target="#ModalForm">
               <div class="text">
                 <span>Ш Б</span>
                 н м к
               </div>
               <p class="mb-0">Запишитесь на <br>проверку</p>
             </div>
-            <div class="header__top-left d-flex align-items-center">
+            <div class="header__top-left align-items-center d-none d-sm-flex">
               <div class="header__top-phone">
                 <a href="#">+7 (800) 111-111-1</a>
                 <span data-bs-toggle="modal" data-bs-target="#ModalForm">Перезвоните мне</span>
@@ -46,14 +46,22 @@
                 <span>3</span>
               </div>
             </div>
+            <div class="header__burger d-block d-md-none">
+              <nav class="navbar" id="header__burger">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-      <div class="header__menu">
+      <div class="header__menu d-none d-sm-block" id="header__menu">
+      <!-- <div class="header__menu d-none d-sm-block" style="display: block;"> -->
         <div class="container">
           <div class="row">
-            <div class="col-1"></div>
-            <nav class="d-flex justify-content-center p-4 col-10">
+            <div class="col-md-1 d-none d-sm-block"></div>
+            <nav class="d-block d-sm-flex justify-content-center p-md-4 col-md-10 col-xs-12">
               <a href="">Текст текст</a>
               <a href="">Текст текст текст</a>
               <a href="">Текст текст</a>
@@ -61,9 +69,8 @@
               <a href="">Текст текст</a>
               <a href="">Текст и текст</a>
             </nav>
-            <div class="col-1">
+            <div class="col-md-1 col-xs-12 px-0 d-md-block position-relative">
               <div class="header__menu-serch ">
-
                 <form action="">
                   <label for="serch">
                     <img src="/public/images/serch.svg" alt="">
@@ -72,9 +79,7 @@
                 </form>
               </div>
             </div>
-            
           </div>
-          
         </div>
       </div>
     </header>
@@ -82,7 +87,7 @@
       <section class="banner">
         <div class="container">
           <div class="row">
-            <div class="col-8">
+            <div class="col-md-8 col-xs-12">
               <div class="banner__breadcrumbs d-flex align-items-center gx-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <g clip-path="url(#clip0_1999_19817)">
@@ -110,7 +115,7 @@
               </div>
               <button data-bs-toggle="modal" data-bs-target="#ModalForm">Записаться на проверку </button>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-xs-12">
               <img src="/public//images/banner.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
@@ -120,7 +125,7 @@
         <div class="container">
           <h2>Заголовок заголовок заголовок</h2>
           <!-- Данная сетка сделана что бы четко соблести отсупы между элементами -->
-          <div class="advantages__grid">
+           <div class="advantages__grid">
             <div class="advantages__grid-item">
               <!-- Тут по БЭМ подошло бы стуктура advantages-grid__item-icon но я пишу по инструкции -->
               <div class="advantages__grid-icon">
@@ -132,35 +137,35 @@
               <div class="advantages__grid-icon">
                 <img src="/public/images/i2.svg" alt="">
               </div>
-              <p>Текст <span>Текст текст</span> Текст текст Текст</p>
+              <p>Текст Текст Текст Текст Текст <br>Текст Текст <br>Текст Текст Текст </p>
             </div>
             <div class="advantages__grid-item">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i3.svg" alt="">
               </div>
-              <p>Текст <span>Текст текст</span> Текст текст Текст</p>
+              <p>Текст Текст Текст <br>Текст </p>
             </div>
             <div class="advantages__grid-item">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i4.svg" alt="">
               </div>
-              <p>Текст <span>Текст текст</span> Текст текст Текст</p>
+              <p>Текст Текст Текст Текст <br>Текст Текст <br>Текст Текст </p>
             </div>
             <div class="advantages__grid-item">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i5.svg" alt="">
               </div>
-              <p>Текст <span>Текст текст</span> Текст текст Текст</p>
+              <p><span>Текст Текст Текст</span>, <br>Текст Текст Текст Текст <br>Текст Текст </p>
             </div>
             <div class="advantages__grid-item">
               <div class="advantages__grid-icon">
                 <img src="/public/images/i6.svg" alt="">
               </div>
-              <p>Текст <span>Текст текст</span> Текст текст Текст</p>
+              <p>Текст  <br>Текст  Текст  Текст  <br>Текст  Текст </p>
             </div>
           </div>
           <!-- Отступ 30px сверху для конпки лучше задать в css -->
-          <button class="icon"  data-bs-toggle="modal" data-bs-target="#ModalForm">
+           <button class="icon"  data-bs-toggle="modal" data-bs-target="#ModalForm">
             Записаться на проверку 
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -180,7 +185,7 @@
       <section class="about">
         <div class="container">
           <div class="row">
-            <div class="col-8">
+            <div class="col-md-8 col-xs-12">
               <h2>Текст текст:</h2>
               <div class="about__text">
                 <ul>
@@ -193,7 +198,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-xs-12">
               <img src="/public/images/about.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
@@ -204,7 +209,7 @@
           <h2>Заголовок</h2>
 
           <!-- Pedding устанавливаю что бы не срезалась тень от блока -->
-          <div class="swiper mySwiper pb-2">
+          <div class="swiper mySwiper pb-2 mx-xs-2">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="service__item">
@@ -256,14 +261,14 @@
             </div>
           </div>
           <!-- По фигме pedding 20px botstrap в p-4 дает 24px -->
-          <p class="gray pt-4">*текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p>
+          <!-- <p class="gray pt-4">*текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p> -->
         </div>
       </section>
       <section class="faq">
         <div class="container">
-          <div class="faq__block row">
+          <div class="faq__block row mx-xs-2">
             <!-- Pedding 30px лучше задать в речную -->
-            <div class="faq__block-info col-7">
+          <div class="faq__block-info col-md-7 col-xs-12">
               <h2>Вопрос вопрос вопрос вопрос вопрос вопрос вопрос?</h2>
               <ol>
                 <li>Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст </li>
@@ -274,7 +279,7 @@
               </ol>
               <p>Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст .</p>
             </div>
-            <div class="col-5 p-0">
+            <div class="col-md-5 col-xs-12 p-0">
               <img src="/public/images/faq.png" alt="" class="ModalImg" data-bs-toggle="modal" data-bs-target="#ModalImg">
             </div>
           </div>
@@ -299,17 +304,17 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="container">
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-md-flex justify-content-between align-items-center">
             <div class="footer__top-text">
               Текст текст текст текст текст<br> текст текст 
             </div>
-            <form action="" id="subscribe" class="d-flex footer__top-form">
+            <form action="" id="subscribe" class="d-md-flex footer__top-form">
               <input type="email" name="email" placeholder="Введите свой e-mail" class="me-3">
               <button id="btn-form">Подписаться</button>
             </form>
             <div class="footer__top-social d-flex align-items-center">
               <!-- Использую span так как у p есть отступ снизу -->
-              <span class="me-4">МЫ В СОЦ. <br> СЕТЯХ:</span>
+              <span class="me-md-4">МЫ В СОЦ. <br> СЕТЯХ:</span>
               <a href="#">
                 <img src="/public/images/vk.svg" alt="">
               </a>
@@ -326,8 +331,8 @@
       <div class="footer__info pt-5 pb-5">
         <div class="container">
           <div class="row">
-            <div class="col-3 border-end pe-4">
-              <img src="/public/images/logo.png" alt="">
+            <div class="col-md-3 col-xs-12 border-end pe-4">
+              <img src="/public/images/logo.png" alt="" class="w-100">
               <a href="#" class="footer__info-contact d-flex mb-2">
                 <!-- Лучше поставить SVG кодом но для сокрашения строк ставляю тегом img -->
                 <img src="/public/images/phone.svg" alt="">
@@ -348,9 +353,9 @@
               <hr class="mt-4 mb-4">
               <p>текст текст текст текст текст текст текст текст текст текст текст текст текст </p>
             </div>
-            <div class="col-9 px-4">
-              <div class="footer__info-nav d-flex justify-content-between">
-                <div class="mx-3">
+            <div class="col-md-9 col-xs-12 px-md-4">
+              <div class="footer__info-nav d-md-flex justify-content-between">
+                <div class="mx-md-3 mb-3">
                   <h3>Заголовок</h3>
                   <a href="#">Название</a>
                   <a href="#">Название название</a>
@@ -358,7 +363,7 @@
                   <a href="#">Название</a>
                   <a href="#">Название название</a>
                 </div>
-                <div class="mx-3">
+                <div class="mx-md-3 mb-3">
                   <h3>Заголовок</h3>
                   <a href="#">Название</a>
                   <a href="#">Название название</a>
@@ -369,7 +374,7 @@
                   <a href="#">Название название</a>
                   <a href="#">Название</a>
                 </div>
-                <div class="mx-3">
+                <div class="mx-md-3 mb-3">
                   <h3>Заголовок</h3>
                   <a href="#">Название</a>
                   <a href="#">Название</a>
@@ -379,7 +384,7 @@
                   <a href="#">Название название</a>
                   <a href="#">Название</a>
                 </div>
-                <div class="mx-3">
+                <div class="mx-md-3 mb-3">
                   <h3>Заголовок</h3>
                   <a href="#">Название</a>
                   <a href="#">Название</a>
@@ -435,7 +440,7 @@
     </div>
     <div class="modal fade" id="ModalImg" tabindex="-1" aria-labelledby="ModalImg" aria-hidden="true">
       <div class="modal-dialog">
-       <img class="modal-img" src="/public/images/service.png">
+       <img class="modal-img" src="">
       </div>
     </div>
 </html>

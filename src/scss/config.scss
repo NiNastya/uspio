@@ -11,12 +11,14 @@ h1 {
     font-size: 42px;
     font-weight: 700;
     margin: 30px 0;
+    @include sm-block() {font-size: 28px;}
 }
 
 h2 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 30px;
+    @include sm-block() {font-size: 24px;}
 }
 
 .container {
@@ -53,6 +55,10 @@ button {
     &.icon {
         padding-left: 30px;
     }
+    &.navbar-toggler {
+        background: none;
+        box-shadow: none;
+    }
 }
 .gray {
     color: $gray;
@@ -61,6 +67,7 @@ li {
     font-size: 18px;
     color: $gray-primary;
     line-height: 30px;
+    @include sm-block() {font-size: 16px;}
 }
 p {
     font-size: 16px;
