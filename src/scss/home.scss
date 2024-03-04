@@ -185,6 +185,16 @@
                 }
             }
         }
+        // корзина и избраные для мобилки 
+        .header__top-icon {
+            padding: 8px;
+            border-radius: 50%;
+            background: #fff;
+            span {
+                top: -8px;
+                right: -8px;
+            }
+        }
     }
 
 }
